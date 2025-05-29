@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/746855207478492921/df62de24ba674b5881da6a4522c5afde/artifacts
+end_time: 1748552729377
+entry_point_name: ''
+experiment_id: '746855207478492921'
+lifecycle_stage: active
+run_id: df62de24ba674b5881da6a4522c5afde
+run_name: silent-fawn-897
+run_uuid: df62de24ba674b5881da6a4522c5afde
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748552718687
+status: 3
+tags: []
+user_id: Mohamed

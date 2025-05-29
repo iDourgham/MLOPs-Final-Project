@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/746855207478492921/8e71bd4ae0e8421f8a0b82c28bbedeb3/artifacts
+deleted_time: 1748552631215
+end_time: 1748552333562
+entry_point_name: ''
+experiment_id: '746855207478492921'
+lifecycle_stage: deleted
+run_id: 8e71bd4ae0e8421f8a0b82c28bbedeb3
+run_name: crawling-cow-29
+run_uuid: 8e71bd4ae0e8421f8a0b82c28bbedeb3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748552287957
+status: 3
+tags: []
+user_id: Mohamed
