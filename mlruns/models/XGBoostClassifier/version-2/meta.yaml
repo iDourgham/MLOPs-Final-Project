@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1748559369493
+current_stage: None
+description: ''
+last_updated_timestamp: 1748559369493
+name: XGBoostClassifier
+run_id: b4c118e7cfa24461bd06e2096a6b8ba0
+run_link: ''
+source: mlflow-artifacts:/746855207478492921/b4c118e7cfa24461bd06e2096a6b8ba0/artifacts/model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/746855207478492921/b4c118e7cfa24461bd06e2096a6b8ba0/artifacts/model
+user_id: null
+version: 2

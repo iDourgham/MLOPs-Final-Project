@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/746855207478492921/b4c118e7cfa24461bd06e2096a6b8ba0/artifacts
+end_time: 1748559370003
+entry_point_name: ''
+experiment_id: '746855207478492921'
+lifecycle_stage: active
+run_id: b4c118e7cfa24461bd06e2096a6b8ba0
+run_name: worried-sloth-861
+run_uuid: b4c118e7cfa24461bd06e2096a6b8ba0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748559359714
+status: 3
+tags: []
+user_id: Mohamed

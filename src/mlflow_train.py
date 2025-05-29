@@ -137,6 +137,8 @@ def main():
         mlflow.log_artifact(cm_path)
         plt.close()
 
+        dump(label_encoder, "model_with_mlflow/label_encoder.pkl")
+        mlflow.log_artifact("model_with_mlflow/label_encoder.pkl")
         
 
 if __name__ == "__main__":
