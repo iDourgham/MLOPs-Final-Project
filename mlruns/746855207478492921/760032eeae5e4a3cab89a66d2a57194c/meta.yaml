@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/746855207478492921/760032eeae5e4a3cab89a66d2a57194c/artifacts
+deleted_time: 1748553874719
+end_time: 1748553705961
+entry_point_name: ''
+experiment_id: '746855207478492921'
+lifecycle_stage: deleted
+run_id: 760032eeae5e4a3cab89a66d2a57194c
+run_name: incongruous-ox-554
+run_uuid: 760032eeae5e4a3cab89a66d2a57194c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748553705754
+status: 4
+tags: []
+user_id: Mohamed
