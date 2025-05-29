@@ -1,7 +1,3 @@
-Here is the updated version of your research project documentation with the new model scores and a justification for choosing XGBoost:
-
----
-
 # Research: Hand Gesture Classification
 
 This repository contains the implementation, training, and evaluation of machine learning models for **Hand Gesture Classification** using a normalized dataset derived from the HaGRID dataset. The goal is to classify different hand gestures accurately using various classification algorithms.
