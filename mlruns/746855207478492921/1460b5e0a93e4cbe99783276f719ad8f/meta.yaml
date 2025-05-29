@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/746855207478492921/1460b5e0a93e4cbe99783276f719ad8f/artifacts
+end_time: 1748553435530
+entry_point_name: ''
+experiment_id: '746855207478492921'
+lifecycle_stage: active
+run_id: 1460b5e0a93e4cbe99783276f719ad8f
+run_name: SVC
+run_uuid: 1460b5e0a93e4cbe99783276f719ad8f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748553427294
+status: 3
+tags: []
+user_id: Mohamed

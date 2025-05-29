@@ -4,7 +4,7 @@ entry_point_name: ''
 experiment_id: '746855207478492921'
 lifecycle_stage: active
 run_id: df62de24ba674b5881da6a4522c5afde
-run_name: silent-fawn-897
+run_name: RandomForest
 run_uuid: df62de24ba674b5881da6a4522c5afde
 source_name: ''
 source_type: 4
