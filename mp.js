@@ -3,6 +3,38 @@ const canvasElement = document.getElementsByClassName("output_canvas")[0];
 const canvasCtx = canvasElement.getContext("2d");
 let arrow = null;
 
+// async function onResults(results) {
+//   canvasCtx.save();
+//   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+//   canvasCtx.drawImage(
+//     results.image,
+//     0,
+//     0,
+//     canvasElement.width,
+//     canvasElement.height
+//   );
+//   if (results.multiHandLandmarks) {
+//     for (const landmarks of results.multiHandLandmarks) {
+//       drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {
+//         color: "#00FF00",
+//         lineWidth: 5,
+//       });
+//       drawLandmarks(canvasCtx, landmarks, {
+//         color: "#FF0000",
+//         lineWidth: 2,
+//       });
+//       const arrow = await getPredictedLabel(landmarks);
+//       if (arrow) {
+//         triggerArrowKey("keydown", arrow);
+//         setTimeout(() => {
+//           triggerArrowKey("keyup", arrow);
+//         }, 100);
+//       }
+//     }
+//   }
+//   canvasCtx.restore();
+// }
+
 async function onResults(results) {
   canvasCtx.save();
   canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
@@ -13,6 +45,7 @@ async function onResults(results) {
     canvasElement.width,
     canvasElement.height
   );
+
   if (results.multiHandLandmarks) {
     for (const landmarks of results.multiHandLandmarks) {
       drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {
@@ -23,15 +56,27 @@ async function onResults(results) {
         color: "#FF0000",
         lineWidth: 2,
       });
-      const arrow = await getPredictedLabel(landmarks);
-      if (arrow) {
-        triggerArrowKey("keydown", arrow);
-        setTimeout(() => {
-          triggerArrowKey("keyup", arrow);
-        }, 100);
+
+      // ✅ Process the landmarks into a flat array of 63 values (x, y, z)
+      if (landmarks.length === 21) {
+        const processed_t = landmarks.flatMap(point => [point.x, point.y, point.z]);
+
+        // ✅ Send the processed input to the prediction function
+        const arrow = await getPredictedLabel(processed_t);
+
+        // ✅ Simulate arrow key based on prediction
+        if (arrow) {
+          triggerArrowKey("keydown", arrow);
+          setTimeout(() => {
+            triggerArrowKey("keyup", arrow);
+          }, 100);
+        }
+      } else {
+        console.warn("Expected 21 hand landmarks, got", landmarks.length);
       }
     }
   }
+
   canvasCtx.restore();
 }
 
