@@ -10,17 +10,17 @@ Hand gesture recognition is an important area in computer vision and human-compu
 
 The project includes:
 
-* Data preprocessing and label encoding
-* Model training using Random Forest, Support Vector Classifier (SVC), and XGBoost classifiers
-* Evaluation using accuracy, precision, recall, and F1-score metrics
-* Confusion matrix visualization
-* Model logging and experiment tracking with MLflow
+- Data preprocessing and label encoding
+- Model training using Random Forest, Support Vector Classifier (SVC), and XGBoost classifiers
+- Evaluation using accuracy, precision, recall, and F1-score metrics
+- Confusion matrix visualization
+- Model logging and experiment tracking with MLflow
 
 ---
 
 ## Dataset
 
-The dataset is a CSV file containing 4 Hand Signs features and a target label column. The label column is encoded into numerical classes for training.
+The dataset is a CSV file containing normalized hand gesture features and a target label column. The label column is encoded into numerical classes for training.
 
 ---
 
@@ -28,51 +28,41 @@ The dataset is a CSV file containing 4 Hand Signs features and a target label co
 
 This repository contains implementations and experiments for classifying hand gestures using various machine learning models. Below is a comparison of the performance metrics of three different models trained and evaluated on the same dataset.
 
-| Model         | Accuracy   | F1 Score   | Precision  | Recall     |
-| ------------- | ---------- | ---------- | ---------- | ---------- |
-| Random Forest | 0.9859     | 0.9865     | 0.9866     | 0.9864     |
-| SVC           | **0.9877** | **0.9882** | **0.9888** | **0.9878** |
-| XGBoost       | 0.9868     | 0.9874     | 0.9878     | 0.9872     |
+| Model         | Accuracy        | F1 Score       | Precision      | Recall         |
+|---------------|-----------------|----------------|----------------|----------------|
+| Random Forest | 0.9788          | 0.9785         | 0.9784         | 0.9786         |
+| SVC           | 0.9611          | 0.9609         | 0.9616         | 0.9612         |
+| XGBoost       | **0.9848**      | **0.9845**     | **0.9844**     | **0.9847**     |
 
 ---
 
 ## Summary
 
-* **SVC** achieved the highest performance across all metrics, making it the most accurate model in raw numbers.
-* **XGBoost** performed almost equally well and maintained robust generalization, with only a marginal drop in accuracy.
-* **Random Forest** also showed excellent results, slightly behind XGBoost.
-
----
-
-## Model Selection Justification
-
-Despite SVC slightly outperforming XGBoost in accuracy, the chosen model for deployment is **XGBoost**. This decision is based on several practical considerations:
-
-* **XGBoost is significantly faster** during both training and inference, especially on large datasets.
-* It offers **better support for handling missing values** and built-in regularization to prevent overfitting.
-* XGBoost integrates easily into production pipelines and scales well in distributed environments.
-* It is overall **lighter and more flexible**, making it a better choice for deployment where resources and latency are concerns.
+- **XGBoost** achieved the highest performance across all metrics, making it the best choice among the tested models.
+- **Random Forest** performed well, slightly behind XGBoost.
+- **SVC** also showed competitive results but lagged behind the ensemble methods.
 
 ---
 
 ## Notes
 
-* All models were trained on the same preprocessed dataset of normalized hand gesture features.
-* Metrics were computed on the same test set to ensure fair comparison.
-* Performance metrics used:
+- All models were trained on the same preprocessed dataset of normalized hand gesture features.
+- Metrics were computed on the test set.
+- Performance metrics used:
+  - **Accuracy:** Overall correctness of the model.
+  - **F1 Score:** Harmonic mean of precision and recall.
+  - **Precision:** Correct positive predictions over all positive predictions.
+  - **Recall:** Correct positive predictions over all actual positives.
 
-  * **Accuracy**: Overall correctness of the model.
-  * **F1 Score**: Harmonic mean of precision and recall.
-  * **Precision**: Correct positive predictions over all positive predictions.
-  * **Recall**: Correct positive predictions over all actual positives.
+---
+
+Feel free to explore the code and experiment with hyperparameters to improve these results!
 
 ---
 
 ## Installation
 
 To run the code and experiments, ensure you have the following Python packages installed:
-
----
 
 ## Setup Instructions
 
@@ -105,8 +95,7 @@ scikit-learn==1.6.1
 ---
 
 ## Contributors
+- **Mohamed Mohy** ([GitHub Profile](https://github.com/iDourgham))  
+                   ([LinkedIn Profile](https://www.linkedin.com/in/eng-m-mohy/))
 
-* **Mohamed Mohy** ([GitHub Profile](https://github.com/iDourgham))
-  ([LinkedIn Profile](https://www.linkedin.com/in/eng-m-mohy/))
 
----
