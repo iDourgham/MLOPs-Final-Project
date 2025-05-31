@@ -1,47 +1,56 @@
-# ML Course Final Project - Gesture Control Game
+📊 Monitoring Metrics for Model Performance and Server Health
+-------------------------------------------------------------
 
-This project implements a gesture-controlled game using machine learning for gesture recognition. Players can control the game using hand gestures captured through their webcam.
+### 1\. **Model-Related Metric**
 
-## 🚀 Quick Start
+#### 🔹 Metric: *CPU Time for Model Inference*
 
-1. Install the Live Server extension in VS Code:
-   - Open VS Code
-   - Go to Extensions (Ctrl+Shift+X)
-   - Search for "Live Server"
-   - Install the extension by Ritwick Dey
+-   **What it Measures:**\
+    The total CPU time used by your model-serving process.
 
-2. Launch the project:
-   - Right-click on `index.html`
-   - Select "Open with Live Server"
-   - The game should open in your default browser at `http://localhost:5500`
+-   **Why it Matters:**\
+    Helps assess how much CPU your model inference is consuming over time --- essential for performance tuning and cost monitoring.
 
-## 📁 Project Structure
+* * * * *
 
-- `index.html` - Main game interface
-- `api-call.js` - ML model API integration
-- `cam.js` - Webcam handling and gesture processing
-- `keyboard.js` - Keyboard controls implementation
-- `maze.js` - Maze game logic
-- `mp.js` - Media processing utilities
+### 2\. **`python_gc_collections_total` (Data-Related)**
 
-## 🔧 Important Implementation Note
+#### 🔹 Best Visualization: **Gauge**
 
-In `api-call.js`, there is a TODO section that needs to be implemented:
+-   **Why a Gauge?**
 
-```javascript
-// TODO: Call your model's api here
-// and return the predicted label
-// Possible labels: "up", "down", "left", "right", null
-// null means stop & wait for the next gesture
-```
+    -   Provides a clear snapshot of the total number of garbage collection events.
 
-You need to replace the current random label generation with your actual ML model API call. The function should:
-- Take the processed tensor (`processed_t`) as input
-- Call your deployed ML model's API
-- Return one of these labels: "up", "down", "left", "right", or null
+    -   Useful when you want a real-time count without focusing on historical trends.
 
-## 🎮 Controls
+    -   Allows for threshold-based coloring to indicate abnormal GC activity levels.
 
-The game can be controlled through:
-- Hand gestures (via webcam)
-- Keyboard arrows (as fallback)
+-   **How to Use:**
+
+    -   Display the raw counter value to show how many collections have occurred.
+
+    -   Optionally reset or compare with previous values manually if needed.
+
+    -   Use thresholds to highlight unusually high GC activity.
+
+* * * * *
+
+### 3\. **`process_resident_memory_bytes` (Server-Related)**
+
+#### 🔹 Best Visualization: **Pie Chart**
+
+-   **Why a Pie Chart?**
+
+    -   Clearly shows memory usage as a portion of total available memory.
+
+    -   Useful for visualizing the relative memory consumption of processes or components.
+
+    -   Intuitive for quickly understanding memory distribution.
+
+-   **How to Use:**
+
+    -   Combine with total system memory to show used vs. free memory.
+
+    -   Slice the chart by service/component if applicable.
+
+    -   Apply color coding to indicate warning or critical usage thresholds.
